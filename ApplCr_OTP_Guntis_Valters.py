@@ -55,16 +55,16 @@ def main():
     mode = sys.argv[1].lower()
     
     if mode == 'encrypt':
-        input_file = sys.argv[2]
-        otp_file = sys.argv[3]
-        encrypted_file = sys.argv[4]
-        encrypt_file(input_file, otp_file, encrypted_file)
+        input_file_name = sys.argv[2]
+        otp_file_name = sys.argv[3]
+        out_file_name = sys.argv[4]
+        encrypt_file(input_file_name, otp_file_name, out_file_name)
         
     elif mode == 'decrypt':
         encrypted_file = sys.argv[2]
-        otp_file = sys.argv[3]
+        otp_file_name = sys.argv[3]
         decrypted_file = sys.argv[4]
-        decrypt_file(encrypted_file, otp_file, decrypted_file)
+        decrypt_file(encrypted_file, otp_file_name, decrypted_file)
         
     else:
         print(f"Kļūda: nav norādīts encrypt vai decrypt, tā vietā norādīts '{mode}'")
